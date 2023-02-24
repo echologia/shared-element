@@ -3,10 +3,10 @@
   <div v-if="!room">Room {{ id }} not found</div>
   <div v-else class="p-5 shadow-md rounded-md bg-white my-4">
     <div class="space-x-4 flex max-h-[500px] overflow-y-auto">
-      <img
-        :src="room.images[0]"
-        class="h-[500px] w-full object-cover rounded-md"
-      />
+      <Starport :port="'room-' + room.id">
+        <img :src="room.images[0]" />
+      </Starport>
+
       <div class="flex flex-col space-y-2">
         <img
           v-for="img in otherImages"
@@ -25,7 +25,6 @@
         <Tag v-for="tag in room.tags">{{ tag }}</Tag>
       </div>
     </div>
-
     <div class="w-full flex justify-end">
       <div class="text-blue-500 text-3xl">${{ room.price }}</div>
     </div>
@@ -34,7 +33,7 @@
 
 <script setup lang="ts">
 import rooms from "@/data";
-
+import { Starport } from 'vue-starport'
 const { id } = useRoute().params;
 const room = rooms.find((room) => room.id === Number(id));
 const otherImages = computed(() => room?.images.slice(1, room.images.length));

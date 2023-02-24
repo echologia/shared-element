@@ -1,10 +1,10 @@
 <template>
   <div class="p-5 shadow-md rounded-md bg-white my-4">
     <div class="space-x-4 flex">
-      <img
-        :src="room.images[0]"
-        class="h-[300px] w-[300px] object-cover rounded-md"
-      />
+      <Starport :port="'room-' + room.id">
+        <img :src="room.images[0]" />
+      </Starport>
+
       <div class="flex flex-col">
         <h1 class="text-2xl">{{ room.name }}</h1>
         <p class="text-ellipsis break-words overflow-hidden flex-grow">
@@ -24,6 +24,7 @@
 </template>
 
 <script setup lang="ts">
+import { Starport } from 'vue-starport'
 defineProps<{
   room: Room;
 }>();
