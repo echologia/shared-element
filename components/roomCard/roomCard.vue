@@ -14,7 +14,7 @@
         </p>
 
         <div class="flex flex-wrap space-x-2 flex-shrink-0">
-          <Tag v-for="tag in room.tags">{{ tag }}</Tag>
+          <RoomCardTag v-for="tag in room.tags">{{ tag }}</RoomCardTag>
         </div>
       </div>
 

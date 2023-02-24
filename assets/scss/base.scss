@@ -1,0 +1,12 @@
+:root {
+    --colors--grey-lightest: #EEEFEF;
+    --colors--grey-light: #F5F5F5;
+    --colors--grey-dark: #828D9A;
+    --colors--blue: #2485EC;
+    --colors--white: #fff;   
+}
+
+body {
+    font-family: 'Rubik';
+    background: var(--colors--grey-lightest);
+}

@@ -1,11 +1,12 @@
 <template>
   <StarportCarrier>
-  <div class="bg-gray-50 h-screen">
-    <div class="container mx-auto py-8">
-      <NuxtPage />
+    <div class="h-screen">
+      <Header />
+      
+        <NuxtPage />
+      
     </div>
-  </div>
-</StarportCarrier>
+  </StarportCarrier>
 </template>
 
 <script setup>
