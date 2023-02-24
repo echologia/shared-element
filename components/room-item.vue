@@ -1,12 +1,14 @@
 <template>
   <div class="p-5 shadow-md rounded-md bg-white my-4">
-    <div class="space-x-4 flex">
-      <Starport :port="'room-' + room.id">
-        <img :src="room.images[0]" />
-      </Starport>
+    <Starport :port="'room-image-' + room.id" keep-alive>
+      <img :src="room.images[0]" />
+    </Starport>
 
+    <div class="space-x-4 flex">
       <div class="flex flex-col">
+        <Starport :port="'room-headline-' + room.id" keep-alive>
         <h1 class="text-2xl">{{ room.name }}</h1>
+        </Starport>
         <p class="text-ellipsis break-words overflow-hidden flex-grow">
           {{ room.description }}
         </p>

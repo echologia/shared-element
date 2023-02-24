@@ -2,11 +2,10 @@
   <NuxtLink class="lowercase font-bold" to="/">Go Back</NuxtLink>
   <div v-if="!room">Room {{ id }} not found</div>
   <div v-else class="p-5 shadow-md rounded-md bg-white my-4">
+    <Starport :port="'room-image-' + room.id" keep-alive>
+      <img :src="room.images[0]" />
+    </Starport>
     <div class="space-x-4 flex max-h-[500px] overflow-y-auto">
-      <Starport :port="'room-' + room.id">
-        <img :src="room.images[0]" />
-      </Starport>
-
       <div class="flex flex-col space-y-2">
         <img
           v-for="img in otherImages"
@@ -16,7 +15,9 @@
       </div>
     </div>
     <div class="flex flex-col">
-      <h1 class="text-2xl">{{ room.name }}</h1>
+      <Starport :port="'room-headline-' + room.id" keep-alive>
+        <h1 class="text-2xl">{{ room.name }}</h1>
+      </Starport>
       <p class="text-ellipsis break-words overflow-hidden flex-grow">
         {{ room.description }}
       </p>
