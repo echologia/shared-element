@@ -14,9 +14,9 @@
         </p>
 
         <div class="flex flex-wrap space-x-2 flex-shrink-0">
-          <RoomCardTag v-for="tag in room.tags" :key="tag">{{
+          <RoomCardTagItem v-for="tag in room.tags" :key="tag">{{
             tag
-          }}</RoomCardTag>
+          }}</RoomCardTagItem>
         </div>
       </div>
 

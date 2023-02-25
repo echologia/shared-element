@@ -1,8 +1,7 @@
 <template>
   <StarportCarrier>
     <div class="h-screen">
-      <Header />
-
+      <HeaderItem />
       <NuxtPage />
     </div>
   </StarportCarrier>

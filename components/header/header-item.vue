@@ -1,8 +1,8 @@
 <template>
   <header class="bg-white">
     <div class="container mx-auto py-8 flex items-center">
-      <HeaderLogo />
-      <HeaderNavigation />
+      <HeaderLogoDefault />
+      <HeaderNavigationItem />
     </div>
   </header>
 </template>

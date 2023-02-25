@@ -1,10 +1,11 @@
 <template>
   <div>
-    <Filterbar />
-    <Booking />
+    <FilterbarFilterBar />
+    <BookingBar />
     <div class="container mx-auto py-8">
       <NuxtLink v-for="room in rooms" :key="room.id" :to="'/' + room.id">
-        <RoomCard :room="<Room />room" />
+        <!-- eslint-disable-next-line vue/no-parsing-error -->
+        <RoomCardRoomcardItem :room="<Room>room" />
       </NuxtLink>
     </div>
   </div>
