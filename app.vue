@@ -12,13 +12,6 @@ import { StarportCarrier } from "vue-starport";
 </script>
 
 <style>
-[data-starport-craft] {
-  background: #0805;
-}
-[data-starport-proxy]:not([data-starport-landed]) {
-  background: #8005;
-}
-
 .starport-placeholder {
   visibility: hidden;
 }
@@ -26,6 +19,12 @@ import { StarportCarrier } from "vue-starport";
 [data-starport-landed="true"] + .starport-placeholder {
   display: none;
 }
+
+[data-starport-craft] {
+  white-space: nowrap;
+  transition-duration: 0.5s !important;
+}
+
 * {
   /* transition-duration: 3s !important; */
 }

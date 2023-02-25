@@ -3,7 +3,11 @@
     class="room-card-item p-5 shadow-md rounded-md bg-white my-4 flex items-start gap-8"
   >
     <div class="image-wrapper rounded-md">
-      <Starport :port="'room-image-' + room.id" keep-alive>
+      <Starport
+        :port="'room-image-' + room.id"
+        keep-alive
+        class="starport-image"
+      >
         <img :src="room.images[0]" />
       </Starport>
       <img class="starport-placeholder" :src="room.images[0]" />
@@ -12,7 +16,11 @@
     <div class="content">
       <div class="header flex justify-between py-5">
         <div class="headline-wrapper">
-          <Starport :port="'room-headline-' + room.id" keep-alive>
+          <Starport
+            :port="'room-headline-' + room.id"
+            keep-alive
+            class="starport-headline"
+          >
             <h1 class="text-2xl font-medium">{{ room.name }}</h1>
           </Starport>
           <h1 class="text-2xl starport-placeholder">{{ room.name }}</h1>
