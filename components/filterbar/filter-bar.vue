@@ -1,41 +1,61 @@
 <template>
   <div class="bg-white filter-bar">
-    <ul class="filterbar-inner py-8 flex mx-auto">
-      <li class="step01 step flex items-center active">
-        <span class="number flex items-center justify-center rounded-md"
-          >1</span
-        >
-        <span class="description rounded-md">Availability</span>
+    <ul class="filter-bar-inner flex mx-auto">
+      <li
+        v-for="(listItem, i) in listItems"
+        :key="i"
+        class="step flex items-center"
+        :class="{ active: i === activeItem }"
+        @click="selectItem(i)"
+      >
+        <span class="number flex items-center justify-center rounded-md">{{
+          listItem.id
+        }}</span>
+        <span class="description rounded-md">{{ listItem.description }}</span>
         <span class="line"></span>
-      </li>
-      <li class="step02 step flex items-center">
-        <span class="number flex items-center justify-center rounded-md"
-          >2</span
-        >
-        <span class="description">Extras</span>
-        <span class="line"></span>
-      </li>
-      <li class="step03 step flex items-center">
-        <span class="number flex items-center justify-center rounded-md"
-          >3</span
-        >
-        <span class="description">Summary</span>
-        <span class="line"></span>
-      </li>
-      <li class="step04 step flex">
-        <span class="number flex items-center justify-center rounded-md"
-          >4</span
-        >
-        <span class="description">Confirmation</span>
       </li>
     </ul>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      listItems: [
+        {
+          id: 1,
+          description: "Availability",
+        },
+        {
+          id: 2,
+          description: "Extras",
+        },
+        {
+          id: 3,
+          description: "Summary",
+        },
+        {
+          id: 3,
+          description: "Confirmation",
+        },
+      ],
+      activeItem: null,
+    };
+  },
+  methods: {
+    selectItem(i) {
+      this.activeItem = i;
+    },
+  },
+};
+</script>
+
 <styles lang="scss" scoped>
 .filter-bar {
   &-inner {
-    max-width: calc(1536px - 33%);
+    max-width: calc(1536px - 25% - 3rem);
+    padding: 2rem;
   }
   .flex {
     gap: 1rem;
@@ -43,9 +63,16 @@
   }
 
   .step {
+    cursor: pointer;
+
+    * {
+      transition: all linear 0.2s;
+    }
+
     &:last-child {
       width: auto;
     }
+
     &.active {
       .line {
         border-top: 1px solid var(--colors--blue);
