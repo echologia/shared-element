@@ -36,7 +36,7 @@ export default {
           description: "Summary",
         },
         {
-          id: 3,
+          id: 4,
           description: "Confirmation",
         },
       ],
@@ -64,6 +64,8 @@ export default {
 
   .step {
     cursor: pointer;
+    font-weight: 500;
+    color: var(--colors--grey-dark);
 
     * {
       transition: all linear 0.2s;

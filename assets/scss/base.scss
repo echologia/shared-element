@@ -3,10 +3,16 @@
   --colors--grey-light: #f5f5f5;
   --colors--grey-dark: #828d9a;
   --colors--blue: #2485ec;
+  --colors--blue-dark: #263854;
   --colors--white: #fff;
 }
 
 body {
   font-family: "Rubik";
   background: var(--colors--grey-lightest);
+  color: var(--colors--blue-dark);
+}
+
+p {
+  margin: 1rem 0;
 }

@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Rubik&display=swap",
+          href: "https://fonts.googleapis.com/css?family=Rubik:400,500",
         },
       ],
     },
