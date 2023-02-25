@@ -57,6 +57,7 @@ export default {
     max-width: calc(1536px - 25% - 3rem);
     padding: 2rem;
   }
+
   .flex {
     gap: 1rem;
     width: 100%;
@@ -79,10 +80,12 @@ export default {
       .line {
         border-top: 1px solid var(--colors--blue);
       }
+
       .description {
         color: var(--colors--blue-dark);
         background: var(--colors--grey-light);
       }
+
       .number {
         background: var(--colors--blue);
       }

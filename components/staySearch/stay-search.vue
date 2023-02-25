@@ -35,10 +35,12 @@ import IconSearch from "@/assets/icons/search";
       border-left: 0 !important;
     }
   }
+
   input {
     display: block;
     width: 100%;
   }
+
   button {
     width: 3.25rem;
     height: 3.25rem;

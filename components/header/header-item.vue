@@ -9,7 +9,7 @@
 
 <style lang="scss" scoped>
 header {
-  height: 76px;
+  height: 4.75rem;
   border-bottom: 1px solid var(--colors--grey-lightest);
 }
 </style>

@@ -67,6 +67,7 @@ const otherImages = computed(() => room?.images.slice(1, room.images.length));
 .detail.container {
   max-width: 1200px;
 }
+
 .images {
   max-height: 60vh;
   overflow: hidden;

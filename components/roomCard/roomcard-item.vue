@@ -2,7 +2,7 @@
   <div
     class="room-card-item p-5 shadow-md rounded-md bg-white my-4 flex items-start gap-8"
   >
-    <div class="image-wrapper rounded-md">
+    <div class="image-wrapper rounded-md w-1/3">
       <Starport
         :port="'room-image-' + room.id"
         keep-alive
@@ -13,7 +13,7 @@
       <img class="starport-placeholder" :src="room.images[0]" />
     </div>
 
-    <div class="content">
+    <div class="content w-2/3">
       <div class="header flex justify-between py-5">
         <div class="headline-wrapper">
           <Starport
@@ -71,12 +71,10 @@ defineProps<{
 
 <style lang="scss">
 .image-wrapper {
-  width: 35%;
   overflow: hidden;
 }
-.content {
-  width: 65%;
 
+.content {
   .header {
     border-bottom: 1px solid var(--colors--grey-light);
   }
