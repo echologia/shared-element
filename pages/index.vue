@@ -2,7 +2,9 @@
   <div class="flex gap-0">
     <div class="content-left w-3/4">
       <FilterbarFilterBar />
+      <StaySearch />
       <div class="m-10">
+        <h1>All available rooms</h1>
         <NuxtLink v-for="room in rooms" :key="room.id" :to="'/' + room.id">
           <!-- eslint-disable-next-line vue/no-parsing-error -->
           <RoomCardRoomcardItem :room="<Room>room" />
