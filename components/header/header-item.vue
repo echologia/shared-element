@@ -7,7 +7,7 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   height: 76px;
   border-bottom: 1px solid var(--colors--grey-lightest);

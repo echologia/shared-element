@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white">
-    <ul class="container mx-auto py-8 flex">
+  <div class="bg-white filter-bar">
+    <ul class="filterbar-inner py-8 flex mx-auto">
       <li class="step01 step flex items-center active">
         <span class="number flex items-center justify-center rounded-md"
           >1</span
@@ -33,37 +33,47 @@
 </template>
 
 <styles lang="scss" scoped>
-.flex {
-  gap: 1rem;
-  width: 100%;
-}
+.filter-bar {
+  &-inner {
+    max-width: calc(1536px - 33%);
+  }
+  .flex {
+    gap: 1rem;
+    width: 100%;
+  }
 
-.step.active {
+  .step {
+    &:last-child {
+      width: auto;
+    }
+    &.active {
+      .line {
+        border-top: 1px solid var(--colors--blue);
+      }
+      .description {
+        background: var(--colors--grey-light);
+      }
+      .number {
+        background: var(--colors--blue);
+      }
+    }
+  }
+
   .line {
-    border-top: 1px solid var(--colors--blue);
+    display: block;
+    width: 100%;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-top: 1px dashed var(--colors--grey-dark);
   }
-  .description {
-    background: var(--colors--grey-light);
-  }
+
   .number {
-    background: var(--colors--blue);
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    color: var(--colors--white);
+    background: var(--colors--grey-dark);
   }
-}
-
-.line {
-  display: block;
-  width: 100%;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  border-top: 1px dashed var(--colors--grey-dark);
-}
-
-.number {
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.75rem;
-  flex-shrink: 0;
-  color: var(--colors--white);
-  background: var(--colors--grey-dark);
 }
 </styles>

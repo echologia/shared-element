@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 shadow-md rounded-md bg-white my-4">
+  <div class="room-card-item p-5 shadow-md rounded-md bg-white my-4">
     <Starport :port="'room-image-' + room.id" keep-alive>
       <img :src="room.images[0]" />
     </Starport>
