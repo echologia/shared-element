@@ -40,7 +40,7 @@ export default {
           description: "Confirmation",
         },
       ],
-      activeItem: null,
+      activeItem: 0,
     };
   },
   methods: {
@@ -80,6 +80,7 @@ export default {
         border-top: 1px solid var(--colors--blue);
       }
       .description {
+        color: var(--colors--blue-dark);
         background: var(--colors--grey-light);
       }
       .number {

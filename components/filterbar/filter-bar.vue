@@ -24,8 +24,3 @@
 <script setup lang="ts">
 import rooms from "@/data";
 </script>
-
-<styles lang="scss" scoped>
-.filter-bar {
-}
-</styles>
