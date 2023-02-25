@@ -38,7 +38,6 @@
         >
           {{ room.description }}
         </p>
-        <NuxtLink :to="'/' + room.id">Read more</NuxtLink>
       </div>
 
       <div class="flex flex-wrap space-x-2 flex-shrink-0">
